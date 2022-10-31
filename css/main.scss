@@ -1,0 +1,692 @@
+//reset
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+//cores
+
+$cor-de-fundo: #AFB4FF;
+$cor-de-fundo-2: rgb(50, 50, 116);
+$cor-secundaria:  darkslategrey;
+$cor-borda: rgb(234, 187, 33);
+
+$light-green: chartreuse;
+$yellow: rgb(255, 255, 121);
+$light-yellow: rgb(255, 255, 207);
+$cor-stroung: green;
+$white: #fff;
+$black: #000;
+
+
+//fontes
+
+$fonte-titulo: "work sans",sans serif;
+$fonte-texto-1: "overpass", sans serif;
+$fonte-texto-2: "Arial, Helvetica", sans-serif;
+$fonte-texto-3: "Times New Roman", Times, serif;
+
+$text-size-12: 1.2rem;
+$text-size-100: 1.6rem;
+$text-size-200: 2rem;
+$text-size-300: 2.4rem;
+$text-size-400: 3.2rem;
+
+section{
+    background-color:$cor-de-fundo;
+    padding: .4rem;
+    max-width: 39rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    max-width: 39rem;
+    background: radial-gradient(122.44% 122.44% at 50% 50%, #1CBF84 0%, rgba(4, 13, 9, 0.7) 100%);
+    height: 8vh;
+    gap: 1rem;
+
+    img{
+        width: 2.6rem;
+        width: 2.6rem;
+    }
+}
+
+h1{
+    font-size: $text-size-100;
+    font-family: $fonte-titulo;
+    font-weight: 400;
+    color:$light-green;
+    --animate-duration: 3s;
+}
+
+.introd{
+    font-size: $text-size-12;
+    font-weight:200;
+    font-family: $fonte-texto-2;
+    max-width: 39rem;
+    color: $black;
+    margin-top: 4rem;
+    margin-bottom: 1.4rem;
+}
+
+.introduction{
+    padding: 1rem;
+    background-color: $cor-secundaria;
+    max-width: 39rem;
+    border-radius: 1.2rem;
+}
+
+.menu_int{
+    cursor: pointer;
+    line-height: 1.2rem;
+    list-style: none;
+}
+
+.lista{
+    position: absolute;
+    cursor: pointer;
+    left: 90%;
+    top: 10%;
+}
+
+nav{
+    background-color: $cor-de-fundo-2;
+    width: 15vw;
+    position: absolute;
+    right: 2%;
+    top: 13%;
+    width: 16rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 360ms;
+    transform: translatey(-5rem);
+    padding: 1rem;
+    border: .1rem solid $white;
+}
+
+a{
+    font-size: $text-size-12;
+    color: $white;
+    font-family: $fonte-texto-2;
+    line-height: 3rem;
+
+    &:hover{
+        background-color: $light-yellow;
+        color: $cor-stroung;
+        padding: .3rem;
+        font-size: 1.4rem;
+        transition: all 360ms;
+    }
+}
+
+.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(2rem) !important;
+}
+
+h3{
+    font-size:$text-size-12;
+    font-family:$fonte-titulo ;
+    color: $white;
+    line-height: 2rem ;
+    font-weight: 100;
+    margin-block: .6rem;
+}
+
+p2{
+    font-size: $text-size-12;
+    font-family: $fonte-texto-2;
+    color: $yellow;
+    width: 39rem;
+    margin-bottom: 2rem;
+    --animate-duration: 3.5s;
+}
+
+strong{
+    color: $yellow;
+    font-size: $text-size-100;
+    font-weight: 100;
+}
+
+.box_b{
+    max-width: 39rem;
+    background-color: $cor-de-fundo-2;
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 1.2rem;
+    border: .3rem solid $cor-borda;
+    margin-block: 1.2rem;
+}
+
+.pauta_mus{
+    height: 6rem;
+    width: 18rem;
+    margin-top: 1.2rem;
+}
+
+.grid_show {
+    max-width: 39rem;
+    border: .1rem solid black;
+    padding: 1rem;
+    background-color: $light-yellow;
+    border-radius: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr ;
+    line-height: 2rem;
+}
+
+.instrumento {
+    color: blue;
+    font-size: $text-size-100;
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+    grid-column: 1/4;
+  }
+
+.fla{
+    width: 8rem;
+    height: 8rem;
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.pia{
+    width: 8rem;
+    height: 8rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.vio{
+    width: 8rem;
+    height: 8rem;
+}
+
+.sax{
+    width: 8rem;
+    height: 8rem;
+}
+
+.viol{
+    width: 8rem;
+    height: 8rem;
+}
+
+.bat{
+    width: 8rem;
+    height: 8rem;
+}
+
+p4{
+    font-size: $text-size-12;
+    font-family: $fonte-texto-3;
+}
+
+container{
+    grid-row: 2/3;
+    grid-column: 1/4;
+    padding: .6rem;
+    max-width: 39rem;
+ }
+
+ article{
+    max-width: 39rem;
+    background-color: $cor-de-fundo-2;
+    border-radius: .6rem;
+    margin-block: 1.2rem;
+    padding: 1rem;
+    line-height:1.8rem;
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: 1fr,1fr,1fr,1fr;
+
+    img{
+        width: 16rem;
+        height: 12rem;
+    }
+
+    h3{
+        font-family: $fonte-texto-2;
+        font-size: $text-size-100;
+        display: flex;
+        justify-content: center;
+        background-color: blue;
+        padding: .6rem;
+        margin-bottom: 1.2rem;
+        max-width: 36rem;
+    }
+
+    p3{
+        color: $white;
+        font-size: $text-size-12;
+        font-family: $fonte-texto-2;
+        max-width: 36rem;
+    }
+
+    .audios{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr, 1fr ,1fr, 1fr, 1fr, 1fr, 1fr; ;
+        margin-top: 1.6rem;
+        max-width: 39rem;
+        
+        h3{
+            font-size: $text-size-12;
+            max-width: 36rem;
+            background-color: blue;
+            padding: .3rem;
+        }
+    }
+
+    .music_1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-block: .8rem;
+    }
+
+    .musica_a{
+        width: 24rem;
+        height: 3rem;
+    }
+
+    .music_2{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        margin-block: .8rem;
+    }
+
+    .musica_b{
+        width: 24rem;
+        height: 3rem;
+    }
+
+    .music_3{
+        grid-column: 1/2;
+        grid-row: 6/7;
+        margin-block: .8rem;
+    }
+
+    .musica_c{
+        width: 24rem;
+        height: 3rem;
+    }
+ }
+
+ footer{
+    background-color: $cor-secundaria;
+    max-width: 39rem;
+    padding: .4rem;
+
+    h2{
+        font-family: $fonte-texto-1;
+        color: $light-yellow;
+        font-size: $text-size-12;
+    }
+ }
+
+ .sociais{
+    width: 24em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scale: 0.7;
+
+    span{
+        color:$white;
+        font-size: $text-size-12;
+        font-family: $fonte-texto-1;
+    }
+ }    
+
+    .parceiros{
+        max-width: 39rem;
+        background-color: green;
+    }
+
+@media (min-width: 800px){
+
+section{
+    background-color:$cor-de-fundo;
+    padding: .6rem;
+    max-width: 100rem;
+    margin-left: 10rem;
+}
+    
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    max-width: 100rem;
+    background: radial-gradient(122.44% 122.44% at 50% 50%, #1CBF84 0%, rgba(4, 13, 9, 0.7) 100%);
+    height: 16vh;
+    gap: 8rem;
+    
+    img{
+        width: 4rem;
+        width: 4rem;
+    }
+}
+    
+h1{
+    font-size: $text-size-400;
+    font-family: $fonte-titulo;
+    font-weight: 400;
+    color:$light-green;
+    --animate-duration: 3s;
+    }
+
+.introd{
+    font-size: $text-size-100;
+    font-weight:200;
+    font-family: $fonte-texto-2;
+    max-width: 100rem;
+    color: $black;
+    margin-block: 1.4rem;
+}
+
+.introduction{
+    padding: 1rem;
+    background-color: $cor-secundaria;
+    max-width: 88rem;
+    border-radius: 1.2rem;
+    gap: 1rem;
+}
+
+.box_ax{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    font-size: $text-size-100;
+    line-height: 3rem;
+}
+
+p2{
+    font-size: $text-size-100;
+    line-height: 3rem;
+    width: 44rem;
+}
+
+.menu_int{
+    cursor: pointer;
+    line-height: 1.2rem;
+    list-style: none;
+}
+
+ul{
+    max-width: 60vw;
+    position: absolute;
+    display: flex;
+    gap: 1.6rem;
+}
+    
+.lista{
+    position: absolute;
+    cursor: pointer;
+    left: 60%;
+    top: 11%;
+    visibility: hidden;
+}
+    
+nav{
+    background-color: $cor-de-fundo-2;
+    width: 56rem;
+    height: 4rem;
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 6rem;
+    visibility: visible;
+    opacity: 1;
+    padding: .4rem;
+    border: .1rem solid $white;
+}
+    
+a{
+    font-size: $text-size-12;
+    color: $white;
+    font-family: $fonte-texto-2;
+    margin-left: 1rem;
+    
+    &:hover{
+        background-color: $light-yellow;
+        color: $cor-stroung;
+        padding: .3rem;
+        transition: all 320ms;
+    }
+}
+    
+.box_b{
+    max-width: 88rem;
+    background-color: $cor-de-fundo-2;
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 1.2rem;
+    border: .3rem solid $cor-borda;
+    line-height: 1.8rem;
+    margin-block: 1.2rem;
+    display: flex;
+    gap: 2.6rem;
+}
+    
+.pauta_mus{
+    height: 12rem;
+    width: 36rem;
+    margin-top: 1.2rem;
+}
+
+.grid_show {
+    max-width: 88rem;
+    border: .1rem solid black;
+    padding: 1rem;
+    background-color: $light-yellow;
+    border-radius: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr ;
+    line-height: 2rem;
+
+    strong{
+        color: blue;
+    }
+}
+    
+.instrumento {
+    color: blue;
+    font-size: $text-size-200;
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+    grid-column: 1/4;
+}
+    
+.fla{
+    width: 14rem;
+    height: 14rem;
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+    
+.pia{
+    width: 14rem;
+    height: 14rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+    
+.vio{
+    width: 14rem;
+    height: 14rem;
+}
+    
+.sax{
+     width: 14rem;
+    height: 14rem;
+}
+    
+.viol{
+    width: 14rem;
+    height: 14rem;
+}
+    
+.bat{
+    width: 14rem;
+     height: 14rem;
+}
+    
+p4{
+    font-size: $text-size-100;
+    font-family: $fonte-texto-3;
+}
+    
+container{
+    grid-row: 2/3;
+     grid-column: 1/4;
+    padding: .6rem;
+    max-width: 88rem;
+}
+
+article{
+    max-width: 100rem;
+    background-color: $cor-de-fundo-2;
+    border-radius: .6rem;
+    margin-block: 1.2rem;
+    padding: 1rem;
+    line-height:1.8rem;
+    display: grid;
+    grid-template-columns: 1fr,1fr,1fr;
+    grid-template-rows: 1fr,1fr,1fr,1fr;
+
+    h3{
+        font-family: $fonte-texto-2;
+        font-size: $text-size-200;
+        display: flex;
+        justify-content: center;
+        background-color: blue;
+        padding: .6rem;
+        margin-bottom: 1.2rem;
+        grid-column: 1/3;
+        max-width: 100rem;
+     }
+
+    img{
+        width: 28rem;
+        height: 22rem;
+        border: .1rem solid $white;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    p2{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    p3{
+        color: $white;
+        font-size: $text-size-100;
+        font-family: $fonte-texto-2;
+        line-height: 2.6rem;
+        grid-column: 2/3;
+        grid-row: 2/5;
+        max-width: 64rem;
+        }
+    }
+
+.audios{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows:1fr, 1fr ,1fr, 1fr, 1fr, 1fr, 1fr;
+            
+    h3{
+        grid-column: 1/2;
+    }
+}
+
+.music_1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-block: .8rem;
+}
+    
+.musica_a{
+    width: 24rem;
+    height: 8rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.music_2{
+    grid-row: 4/5;
+    grid-column: 1/2;
+    margin-block: .8rem;
+}
+.musica_b{
+    width: 24rem;
+    height: 8rem;
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+
+.music_3{
+    grid-column: 1/2;
+    grid-row: 6/7;
+    margin-block: .8rem;
+}
+
+.musica_c{
+    width: 24rem;
+    height: 8rem;
+    grid-row: 7/8;
+    }
+}
+
+footer{
+    width: 100%;
+   
+    background-color: $cor-secundaria;
+    max-width: 100rem;
+    padding: .4rem;
+    
+    h2{
+        font-family: $fonte-texto-1;
+        color: $light-yellow;
+        font-size: $text-size-12;
+    }
+}
+    
+.sociais{
+    width: 36em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+       
+    span{
+        color:$white;
+        font-size: $text-size-100;
+        font-family: $fonte-texto-1;
+    }
+
+.parceiros{
+    width: 60vw;
+
+   li{
+        background-color: transparent;
+        display: flex;
+    }
+    }
+}
